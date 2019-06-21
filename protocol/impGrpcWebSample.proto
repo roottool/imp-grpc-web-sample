@@ -1,0 +1,12 @@
+syntax = "proto3";
+package impGrpcWebSample;
+
+message hellowWorldRequest {};
+
+message helloWorldResponse {
+    string returnText = 1;
+};
+
+service helloWorldService {
+    rpc getHelloWorld (hellowWorldRequest) returns (helloWorldResponse);
+}
