@@ -1,5 +1,5 @@
-// package: impGrpcWebSample
-// file: imp-grpc-web-sample.proto
+// package: helloWorld
+// file: helloWorld.proto
 
 import * as jspb from "google-protobuf";
 

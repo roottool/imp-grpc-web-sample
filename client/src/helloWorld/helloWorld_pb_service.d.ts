@@ -1,7 +1,7 @@
-// package: impGrpcWebSample
-// file: imp-grpc-web-sample.proto
+// package: helloWorld
+// file: helloWorld.proto
 
-import * as imp_grpc_web_sample_pb from "./imp-grpc-web-sample_pb";
+import * as helloWorld_pb from "./helloWorld_pb";
 import {grpc} from "@improbable-eng/grpc-web";
 
 type helloWorldServicegetHelloWorld = {
@@ -9,8 +9,8 @@ type helloWorldServicegetHelloWorld = {
   readonly service: typeof helloWorldService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof imp_grpc_web_sample_pb.hellowWorldRequest;
-  readonly responseType: typeof imp_grpc_web_sample_pb.helloWorldResponse;
+  readonly requestType: typeof helloWorld_pb.hellowWorldRequest;
+  readonly responseType: typeof helloWorld_pb.helloWorldResponse;
 };
 
 export class helloWorldService {
@@ -51,13 +51,13 @@ export class helloWorldServiceClient {
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);
   getHelloWorld(
-    requestMessage: imp_grpc_web_sample_pb.hellowWorldRequest,
+    requestMessage: helloWorld_pb.hellowWorldRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: imp_grpc_web_sample_pb.helloWorldResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: helloWorld_pb.helloWorldResponse|null) => void
   ): UnaryResponse;
   getHelloWorld(
-    requestMessage: imp_grpc_web_sample_pb.hellowWorldRequest,
-    callback: (error: ServiceError|null, responseMessage: imp_grpc_web_sample_pb.helloWorldResponse|null) => void
+    requestMessage: helloWorld_pb.hellowWorldRequest,
+    callback: (error: ServiceError|null, responseMessage: helloWorld_pb.helloWorldResponse|null) => void
   ): UnaryResponse;
 }
 

@@ -1,12 +1,12 @@
-// package: impGrpcWebSample
-// file: imp-grpc-web-sample.proto
+// package: helloWorld
+// file: helloWorld.proto
 
-var imp_grpc_web_sample_pb = require("./imp-grpc-web-sample_pb");
+var helloWorld_pb = require("./helloWorld_pb");
 var grpc = require("@improbable-eng/grpc-web").grpc;
 
 var helloWorldService = (function () {
   function helloWorldService() {}
-  helloWorldService.serviceName = "impGrpcWebSample.helloWorldService";
+  helloWorldService.serviceName = "helloWorld.helloWorldService";
   return helloWorldService;
 }());
 
@@ -15,8 +15,8 @@ helloWorldService.getHelloWorld = {
   service: helloWorldService,
   requestStream: false,
   responseStream: false,
-  requestType: imp_grpc_web_sample_pb.hellowWorldRequest,
-  responseType: imp_grpc_web_sample_pb.helloWorldResponse
+  requestType: helloWorld_pb.hellowWorldRequest,
+  responseType: helloWorld_pb.helloWorldResponse
 };
 
 exports.helloWorldService = helloWorldService;
