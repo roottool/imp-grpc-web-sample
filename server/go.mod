@@ -1,4 +1,4 @@
-module github.com/roottool/imp-grpc-web-sample
+module imp-grpc-web-sample-server
 
 go 1.12
 
