@@ -1,4 +1,4 @@
-// package: 
+// package: helloWorld
 // file: helloWorld.proto
 
 var helloWorld_pb = require("./helloWorld_pb");
@@ -6,7 +6,7 @@ var grpc = require("@improbable-eng/grpc-web").grpc;
 
 var helloWorldService = (function () {
   function helloWorldService() {}
-  helloWorldService.serviceName = "helloWorldService";
+  helloWorldService.serviceName = "helloWorld.helloWorldService";
   return helloWorldService;
 }());
 

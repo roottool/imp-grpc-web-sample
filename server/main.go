@@ -1,11 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"net"
-	"github.com/improbable-eng/grpc-web/go/grpcweb"
-	"impGrpcWebSample/impGrpcWebSample"
+    "net"
+    "golang.org/x/net/context"
+    "google.golang.org/grpc"
+    "google.golang.org/grpc/reflection"
+	pb "imp-grpc-web-sample-server/helloWorld"
 )
 
 const (
@@ -15,9 +16,10 @@ const (
 // server is used to implement helloworld.GreeterServer.
 type server struct{}
 
-// SayHello implements helloworld.GreeterServer
-func (s *server) SayHello() (*pb.getHelloWorld, error) {
-    return &pb.getHelloWorld, nil
+// GetHelloWorld implements helloworld.GreeterServer
+func (s *server) GetHelloWorld(ctx context.Context, in *pb.HellowWorldRequest) (*pb.HelloWorldResponse, error) {
+    result := new(pb.HelloWorldResponse)
+    return result, nil
 }
 
 func main() {
@@ -26,11 +28,11 @@ func main() {
         log.Fatalf("failed to listen: %v", err)
 	}
 
-	s := grpc-web.NewServer()
-    pb.RegisterGreeterServer(s, &server{})
+    grpcServer := grpc.NewServer()
+    pb.RegisterHelloWorldServiceServer(grpcServer, &server{})
     // Register reflection service on gRPC server.
-    reflection.Register(s)
-    if err := s.Serve(lis); err != nil {
+    reflection.Register(grpcServer)
+    if err := grpcServer.Serve(lis); err != nil {
         log.Fatalf("failed to serve: %v", err)
     }
 }
