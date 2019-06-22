@@ -1,4 +1,4 @@
-// package: helloWorld
+// package: 
 // file: helloWorld.proto
 
 import * as helloWorld_pb from "./helloWorld_pb";
