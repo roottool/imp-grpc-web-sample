@@ -23,6 +23,6 @@
     "src"
   ],
   "exclude": [
-    "src/imp-grpc-web-sample/*.js"
+    "src/helloWorld/*.js"
   ]
 }

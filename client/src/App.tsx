@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { hellowWorldRequest, helloWorldResponse } from './imp-grpc-web-sample/imp-grpc-web-sample_pb'
-import { ServiceError, helloWorldServiceClient } from './imp-grpc-web-sample/imp-grpc-web-sample_pb_service'
+import { hellowWorldRequest, helloWorldResponse } from './helloWorld/helloWorld_pb'
+import { ServiceError, helloWorldServiceClient } from './helloWorld/helloWorld_pb_service'
 
 const App: React.FC = () => {
   const [message, setMessage] = useState('')

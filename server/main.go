@@ -18,7 +18,9 @@ type server struct{}
 
 // GetHelloWorld implements helloworld.GreeterServer
 func (s *server) GetHelloWorld(ctx context.Context, in *pb.HellowWorldRequest) (*pb.HelloWorldResponse, error) {
-    result := new(pb.HelloWorldResponse)
+    result := &pb.HelloWorldResponse{
+        ReturnText: "Hello World!",
+    }
     return result, nil
 }
 
