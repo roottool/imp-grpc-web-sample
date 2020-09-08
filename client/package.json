@@ -5,15 +5,15 @@
   "dependencies": {
     "@improbable-eng/grpc-web": "^0.13.0",
     "@material-ui/core": "^4.11.0",
-    "@types/jest": "26.0.5",
-    "@types/node": "14.0.23",
-    "@types/react": "16.9.43",
+    "@types/jest": "26.0.13",
+    "@types/node": "14.6.4",
+    "@types/react": "16.9.49",
     "@types/react-dom": "16.9.8",
-    "google-protobuf": "^4.0.0-rc.1",
+    "google-protobuf": "^3.13.0",
     "grpc-web-client": "^0.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,9 +37,9 @@
     ]
   },
   "devDependencies": {
-    "@types/google-protobuf": "^3.7.2",
-    "storybook": "^5.3.19",
+    "@types/google-protobuf": "^3.7.3",
+    "storybook": "^6.0.21",
     "ts-protoc-gen": "^0.12.0",
-    "typescript": "3.9.7"
+    "typescript": "4.0.2"
   }
 }
